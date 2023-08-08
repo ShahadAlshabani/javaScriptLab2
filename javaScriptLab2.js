@@ -37,19 +37,21 @@ characters = [
       eye_color: "red",
     },
   ];
-  
+//Find
 const blueEyes = characters.find(function(element) {
     return element.eye_color === "blue";
 })
 const mass50 = characters.find(function(element) {
     return element.mass > 50;
 })
+//Filter
 const height200 = characters.filter(function(currentValue, index, array) {
     return currentValue.height < 2.0 ;
 })
 const male = characters.filter(function(currentValue, index, array) {
     return currentValue.gender ==="male" ;
 })
+//Map
 const mapNames = characters.map(function(currentValue) {  
     return currentValue.name;
   })
@@ -57,7 +59,7 @@ const mapNames = characters.map(function(currentValue) {
     return currentValue.height;
   })
 
-
+//Sort
   const sortMass = characters.sort(function(a,b) {  
     return parseFloat(a.mass) - parseFloat(b.mass);
 });
@@ -65,6 +67,7 @@ const sortHeight = characters.sort(function(a,b) {
     return parseFloat(b.height) - parseFloat(a.height);
 
 })
+//Every
 const everyCharactersMass = characters.every(function(currentValue, index, array) {
     
     return currentValue.mass > 40 ;
@@ -75,6 +78,7 @@ const everyCharactersHeight = characters.every(function(currentValue, index, arr
     return currentValue.height < 2.0;
     
 })
+//Some
 const someCharactersBlueEyes= characters.some(function(currentValue, index, array) {
     
     return currentValue.eye_color === "blue" ;
